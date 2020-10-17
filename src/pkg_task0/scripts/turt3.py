@@ -4,8 +4,8 @@ from geometry_msgs.msg import Twist
 from turtlesim.msg import Pose
 
 def revolve():
-    radius = 1#float(input("Enter Radius :"))
-    speed = 1#float(input("Enter Speed :"))
+    radius = float(input("Enter Radius :"))
+    speed = float(input("Enter Speed :"))
     distance = 2*3.14*radius
     rospy.init_node('turtle_revolve', anonymous = True)  
     vel_pub = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
@@ -18,16 +18,22 @@ def revolve():
         vel_msg.angular.z = speed/radius
         current_distance = 0
         t0 = rospy.Time.now().to_sec()
+        while(current_distance < distance):
+            vel_pub.publish(vel_msg)
+            t1=rospy.Time.now().to_sec()
+            current_distance = speed*(t1-t0)
+            print current_distance
+            print "Turtle is revolving"
+        print "Turtle has stopped"
+        vel_msg.linear.x=0
+        vel_msg.linear.z=0
+        rospy.signal_shutdown('finished')
     rate.sleep()
 
 def pose_callback(vel):
-    while(vel.current_distance < vel.distance):
-        print vel.current_distance
-        print "Turtle is revolving"
-    print "Turtle has stopped"
-    vel_msg.linear.x=0
-    vel_msg.linear.z=0
-    rospy.signal_shutdown('end')
+    while not (round(vel.theta)==0.0):
+        print vel.theta
+    
 
 if __name__=='__main__':
     try:

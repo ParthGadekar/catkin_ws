@@ -9,8 +9,12 @@ initialPos = 0
 def callback(data) :
     global initialPos
     pos = initialPos
-    if data.theta == pos :
+    vel_msg = Twist()
+    if data.x == pos :
         rospy.signal_shutdown('finished')
+        vel_msg.linear.x = 0.0
+        vel_msg.angular.z = 0.0
+
         
 
 def initialValue(data) :
@@ -26,16 +30,12 @@ def main() :
     rospy.Subscriber('/turtle1/pose', Pose, initialValue)
     rate = rospy.Rate(5)
     while not rospy.is_shutdown() : 
-        obj_msg = Twist()
-        obj_msg.linear.x = 1.0
-        obj_msg.linear.z = 0.0
-        obj_msg.angular.z = 0.5
-        vel_pub.publish(obj_msg)
+        vel_msg.linear.x = 1.0
+        vel_msg.linear.z = 0.0
+        vel_msg.angular.z = 1.0
+    vel_pub.publish(vel_msg)
     vel_sub = rospy.Subscriber('/turtle1/pose', Pose, callback)
     rate.sleep()
-
-def pose_callback(msg):
-    print(msg.theta)
 
 
 if __name__=='__main__':
