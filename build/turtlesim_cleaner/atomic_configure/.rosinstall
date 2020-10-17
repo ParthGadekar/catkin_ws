@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/hyperwebster/catkin_ws/devel/.private/turtlesim_cleaner/setup.sh

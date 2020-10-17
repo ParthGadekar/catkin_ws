@@ -1,0 +1,1 @@
+/home/hyperwebster/catkin_ws/devel/.private/turtlesim_cleaner/share/common-lisp/ros/turtlesim_cleaner/srv/turtlesim_cleaner-srv.asd

@@ -1,0 +1,1 @@
+/home/hyperwebster/catkin_ws/devel/.private/pkg_task0/share/common-lisp/ros/pkg_task0/srv/MoveSquare.lisp

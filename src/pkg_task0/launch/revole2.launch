@@ -1,0 +1,5 @@
+<launch>
+<node name="turtlesim" pkg="turtlesim" type="turtlesim_node" />
+<node name="graph" pkg="rqt_graph" type="rqt_graph" />
+<node name="revolve" pkg="pkg_task0" type="turt2.py" output="screen" required="true"/>
+</launch>

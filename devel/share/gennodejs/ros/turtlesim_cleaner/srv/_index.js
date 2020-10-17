@@ -1,0 +1,1 @@
+/home/hyperwebster/catkin_ws/devel/.private/turtlesim_cleaner/share/gennodejs/ros/turtlesim_cleaner/srv/_index.js

@@ -1,0 +1,1 @@
+/home/hyperwebster/catkin_ws/devel/.private/turtlesim_cleaner/share/roseus/ros/turtlesim_cleaner/manifest.l

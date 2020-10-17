@@ -1,0 +1,5 @@
+ros_logs
+/home/hyperwebster/catkin_ws/devel/.private/ros_logs/cmake.lock /home/hyperwebster/catkin_ws/devel/./cmake.lock
+/home/hyperwebster/catkin_ws/devel/.private/ros_logs/lib/pkgconfig/ros_logs.pc /home/hyperwebster/catkin_ws/devel/lib/pkgconfig/ros_logs.pc
+/home/hyperwebster/catkin_ws/devel/.private/ros_logs/share/ros_logs/cmake/ros_logsConfig.cmake /home/hyperwebster/catkin_ws/devel/share/ros_logs/cmake/ros_logsConfig.cmake
+/home/hyperwebster/catkin_ws/devel/.private/ros_logs/share/ros_logs/cmake/ros_logsConfig-version.cmake /home/hyperwebster/catkin_ws/devel/share/ros_logs/cmake/ros_logsConfig-version.cmake

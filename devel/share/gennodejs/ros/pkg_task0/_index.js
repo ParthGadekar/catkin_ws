@@ -1,0 +1,1 @@
+/home/hyperwebster/catkin_ws/devel/.private/pkg_task0/share/gennodejs/ros/pkg_task0/_index.js
