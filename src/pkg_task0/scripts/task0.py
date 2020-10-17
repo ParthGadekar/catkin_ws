@@ -6,7 +6,7 @@ from turtlesim.msg import Pose
 def revolve():
     radius = 1 #float(input("Enter Radius :"))
     speed = 1 #float(input("Enter Speed :"))
-    distance = 2*3.1415926535897*radius
+    distance = 2*3.141592653589793238*radius
     rospy.init_node('turtle_revolve', anonymous = True)  
     vel_pub = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
     vel_msg = Twist()
@@ -18,7 +18,7 @@ def revolve():
         vel_msg.angular.z = speed/radius
         current_distance = 0
         t0 = rospy.Time.now().to_sec()
-        while(current_distance <= distance):
+        while(current_distance < distance):
             vel_pub.publish(vel_msg)
             t1=rospy.Time.now().to_sec()
             current_distance = speed*(t1-t0)
