@@ -10,7 +10,7 @@
 
     <arg name="x" default="0"/>
         <arg name="y" default="0"/>
-        <arg name="z" default="0"/>
+        <arg name="z" default="1"/>
         
 
         <!-- Spawn the robot model -->
@@ -27,6 +27,8 @@
 
 <!--Uncomment these lines when you want to submit the task1-->
 
+<!--
+
 
 <arg name="record" default="true"/>
 <arg name="duration" default="10"/>
@@ -39,14 +41,11 @@
 
 </group>
 
-<arg name="ws"  /> 
+<arg name="ws"  default="workspace name"/> 
   <node pkg="ros_logs" type="auto_task1_log" name="auto_task1_log"  args="$(arg ws)" output="screen"/>
 
 
-
-
-
-
+-->
   
   
 </launch>
