@@ -25,7 +25,7 @@ def revolve():
         print "Turtle is revolving   ",current_distance
     vel_msg.linear.x=0
     vel_msg.angular.z=0
-    print"Turtle has stopped    ",distance
+    print "Turtle has stopped    ",distance
     #raw_input("Press enter to continue") 
     #rospy.spin()
     

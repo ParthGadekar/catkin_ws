@@ -27,7 +27,7 @@
 
 <!--Uncomment these lines when you want to submit the task1-->
 
-<!--
+
 
 
 <arg name="record" default="true"/>
@@ -45,7 +45,7 @@
   <node pkg="ros_logs" type="auto_task1_log" name="auto_task1_log"  args="$(arg ws)" output="screen"/>
 
 
--->
+
   
   
 </launch>
